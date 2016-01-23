@@ -1,0 +1,3 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	Need to run git init to initialise. Can check status with git status

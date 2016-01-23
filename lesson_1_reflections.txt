@@ -1,0 +1,24 @@
+How did viewing a diff between two versions of a 
+	file help you see the bug that was introduced?
+
+	Isolating faults by line makes the debugging 
+	process simpler
+
+How could having easy access to the entire history 
+	of a file make you a more efficient programmer 
+	in the long term?
+
+	Saves time looking for historic versions of files
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+	pro: changes saved reflect logial changes
+	con: user discretion is required
+
+How might using version control make you more confident to make changes that could break something?
+
+	You have the ability to revert to previous
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+	SQL/Python development projects
