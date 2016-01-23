@@ -1,3 +1,22 @@
 What happens when you initialize a repository? Why do you need to do it?
 
 	Need to run git init to initialise. Can check status with git status
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	Allows user to check what will be committed to repository
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+	can check how many files are to be modified in the staging area
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+	
+	enable reachaibiltiy to be guaged
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	two branches of code are merged with all additions and deletions from the original branch point combined. 
+	The diagram shows the branch and merge points clearly, as well as showing the reachability of each commit
