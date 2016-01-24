@@ -1,23 +1,28 @@
-How did viewing a diff between two versions of a 
-	file help you see the bug that was introduced?
+Install Git:
+	Windows:	http://msysgit.github.io/ >> download >> run >> open Git\Git Bash (as command line)
+	OSX:		http://git-scm.com/download/mac >> run >> ctrl+click open .pkg >> run installer
+				>> Terminal
+	check with eg. git --version
 
-	Isolating faults by line makes the debugging 
-	process simpler
+	git help		tutorials and workflows etc.
 
-How could having easy access to the entire history 
-	of a file make you a more efficient programmer 
-	in the long term?
 
-	Saves time looking for historic versions of files
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+	Enables checking of each line were a modification has been made individually, rather than the entire body of code
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+	Avoids the need for duplication where a mistake cannot be identified. Avoid re-writing code
 
 What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
 
-	pro: changes saved reflect logial changes
-	con: user discretion is required
+	pro: changes saved can reflect logical changes to the code, rather than changes based on time etc which may result in un-compilable code
+	con: user discretion is required, and failing to commit can result in loss of work or duplication
 
 How might using version control make you more confident to make changes that could break something?
 
-	You have the ability to revert to previous
+	Allows for experimentation because there will always be a version to fall back to
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
