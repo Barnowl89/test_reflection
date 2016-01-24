@@ -38,6 +38,26 @@ Useful extras:
 	git checkout <commitID>
 		reset all files to time specified version was made
 
+	git clone <URL>
+		clone a Git repository into the pwd
+
+	git log
+		shows commit log for the present branch
+
+	git log --graph --oneline
+		shows single line including branching structure
+
+	git diff <old commitID> <new commitID>
+		compare two commits by line (+new, -old)
+
+	git diff
+		(no commitID) compares staging and pwd
+
+	git checkout <commitID>
+		change file in pwd to a specified commitID. Ensure that present work is reachable or it will be discarded!
+		
+
+
 confiure Git workspace:
 
 	Mac OSX:
