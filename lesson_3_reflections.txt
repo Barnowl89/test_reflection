@@ -1,0 +1,24 @@
+When would you want to use a remote repository rather than keeping all your work local?
+  
+  This is particularly useful for collaboration, as well as working from multiple locations
+  
+  
+  
+Lesson 3 notes:
+    Setup Github account (instructions online)
+    Create repository. Check create README option if a repository does not already exist
+
+	git remote
+		lists actve remotes
+
+	git remote add <name> <URL>
+		default remote name is 'origin', use this.
+		copy URL from Github eg https://github.com/Barnowl89/test_reflection.git
+		Make sure to use HTTPS not SSH
+
+	git remote -v
+		(verbose) shows URLs for fetch and push (usually the same)
+
+	git push <remote_name> <branch_name>
+		eg git puch origin master
+		pushes the chosen branch to Github servers
