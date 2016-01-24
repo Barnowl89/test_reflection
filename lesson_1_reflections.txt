@@ -27,3 +27,75 @@ How might using version control make you more confident to make changes that cou
 Now that you have your workspace set up, what do you want to try using Git for?
 
 	SQL/Python development projects
+
+
+
+Useful extras:
+
+	git config --global color.ui auto
+		adds clour to UI
+
+	git checkout <commitID>
+		reset all files to time specified version was made
+
+confiure Git workspace:
+
+	Mac OSX:
+
+	download https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+	and https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+	save as <>.bash and <>.sh respectively
+	use mv <filename> <new_filename> to move both to home directory
+
+	Copy following code into .bash_profile if exists, if not create file in home directory:
+
+		# Enable tab completion
+		source ~/git-completion.bash
+
+		# colors!
+		green="\[\033[0;32m\]"
+		blue="\[\033[0;34m\]"
+		purple="\[\033[0;35m\]"
+		reset="\[\033[0m\]"
+
+		# Change command prompt
+		source ~/git-prompt.sh
+		export GIT_PS1_SHOWDIRTYSTATE=1
+		# '\u' adds the name of the current user to the prompt
+		# '\$(__git_ps1)' adds git-related stuff
+		# '\W' adds the name of the current directory
+		export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+
+	For Sublime Editor in default location add:
+
+		export PATH=$PATH:/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin
+
+	this enables editor starting from terminal.
+
+	Restart the terminal after changes
+
+
+	Windows:
+
+	https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+	and
+	https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+	move both, same name. use mv while in home directory so you don't need to specify output path
+
+	Create .bash_profile using mv .bash_profile while in home directory ( cd ~ )
+
+	Copy above code into file.
+
+	If Sublime is in C:/Program Files, add fllowing to .bash_profile:
+
+		alias subl="C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
+
+	then run in git_bash:
+
+		git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
+		git config --global push.default upstream
+		git config --global merge.conflictstyle diff3
+
+	restart git bash
