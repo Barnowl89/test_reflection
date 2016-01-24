@@ -1,18 +1,64 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-	Need to run git init to initialise. Can check status with git status
+	git init 	:	initialises repository in pwd. This sets up a git repository in the directory which 
+					by default is not present
+
+	git clone <URL>
+				:	initialises a repository by cloning a repository from a URL, eg Github
+
+	git status	:	in directory without git repository, error message displayed: 
+					'fatal: Not a git repository (or any of the parent directories): .git'
+					When git repository present, shows staged, unstaged file changes
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-	Allows user to check what will be committed to repository
+	Staging area holds versions ready to be committed. Using git status, can see which files exist in a modified form in the staging area
+
+	git add <filename> 	
+				:	adds <filename> to staging area
+	git reset HEAD <filename>
+				:	removes file from staging area
+	*with caution*
+
+	git reset --hard
+				:	remove changes from staging area OR working directory. NOT UNDO-ABLE
 
 How can you use the staging area to make sure you have one commit per logical change?
 
-	can check how many files are to be modified in the staging area
+	can check how many files are to be modified in the staging area using git status, as well as differences between staging and working directory using git diff without arguments
+
+	git commit
+		commit changes in staging. Editor wil open in order to write a commit message
+
+	git commit -m "Commit Message"
+		as above, eidtor will not open. Message written from terminal
+
+	commit message style guide:
+		http://udacity.github.io/git-styleguide/
+
+	git diff
+		(no args) difference between working directory and staging
+
+	git diff --staged
+		difference between staging and latest commit (same branch)
+
 
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 
 How do the diagrams help you visualize the branch structure?
+
+	git branch
+		(no args) shows branch list including active branch
+
+	git branch <new branch name>
+		creates <new branch name> with same code as current branch
+
+	git checkout <branch name>
+		switch to branch
+
+	git log --graph --oneline <branch names>
+		optional branch names show only selcted branches in graph
+
 	
 	enable reachaibiltiy to be guaged
 
@@ -20,3 +66,19 @@ What is the result of merging two branches together? Why do we represent it in t
 
 	two branches of code are merged with all additions and deletions from the original branch point combined. 
 	The diagram shows the branch and merge points clearly, as well as showing the reachability of each commit
+
+	checkout branch you want to merge into
+	eg. git checkout master 
+
+	git merge <into_branch> <from_branch>
+
+	CONFLICT: git merge returns conflict message. Open file(s) and search <<<
+	conflicts will sit between <<<<< from_branch |||||| common_ancester ======= into_branch >>>>>>
+
+	when resolved, run git status and check resolved. run git add, git commit to merge
+
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+	
+	automatic merging makes sense if different parts of code are being developed
